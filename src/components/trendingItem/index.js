@@ -1,1 +1,1 @@
-export {default} from './trendingItem-view';
+export {default} from './trendingItem-container';
