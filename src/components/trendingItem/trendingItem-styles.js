@@ -28,11 +28,11 @@ const useStyles = makeStyles({
     languageIcon: {
         width: '12px',
         height: '12px',
-        border: '1px solid black',
+        border: '1px solid transparent',
         borderRadius: '50%',
         display: 'inline-block',
 
-        backgroundColor: '#f1e05a',
+        backgroundColor: ({languageColor}) => languageColor,
         marginRight: '5px',
         marginTop: '2px'
     },

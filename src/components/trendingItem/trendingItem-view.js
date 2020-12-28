@@ -1,11 +1,13 @@
 import React from 'react';
 import {StarBorderOutlined, CallSplitOutlined} from '@material-ui/icons';
 import {Button} from '@material-ui/core';
+import colors from './colors.json';
 import useStyles from './trendingItem-styles';
 
 const TrendingItem = props => {
     const {item, contributors, loading} = props;
-    const classes = useStyles();
+    const languageColor = colors[item.language];
+    const classes = useStyles({languageColor});
 
     return (
         <div className={classes.container}>
