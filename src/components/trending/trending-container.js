@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 import Trending from './trending-view';
 
 const TrendingContainer = props => {
@@ -8,7 +9,15 @@ const TrendingContainer = props => {
     const apiUrl = 'https://api.github.com/search/repositories'
     
     const fetchRepos = async () => {
-      const list = fetch(`${apiUrl}?sort=stars&order=desc&q=language:javascript&q=created:<2020-12-27`).then( res => res.json()).then(r => setRepositories(r.items));
+      const response = await axios.get(apiUrl, {
+          params: {
+              sort: 'stars',
+              order: 'desc',
+              q: 'created:<2020-12-27'
+          }
+      });
+      const listData = response.data;
+      setRepositories(listData.items);
     }
 
     const [fetched, setFetched] = useState(false);
