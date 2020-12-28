@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Trending from './components/trending';
 import './App.css';
 

@@ -28,9 +28,6 @@ const TrendingContainer = props => {
             setFetched(true);
         }
     }, [fetched] )
-  
-
-    console.log('list: ', repositories);
 
     return (<Trending repositories={repositories}/>);
 };
