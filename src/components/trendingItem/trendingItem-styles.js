@@ -33,6 +33,12 @@ const useStyles = makeStyles({
         backgroundColor: '#f1e05a',
         marginRight: '5px'
     },
+
+    contributorIcon: {
+        height: '20px',
+        width: '20px',
+        borderRadius: '50%'
+    }
     
 });
 

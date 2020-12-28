@@ -4,7 +4,7 @@ import {Button} from '@material-ui/core';
 import useStyles from './trendingItem-styles';
 
 const TrendingItem = props => {
-    const {item} = props;
+    const {item, contributors, loading} = props;
     const classes = useStyles();
 
     return (
@@ -35,6 +35,17 @@ const TrendingItem = props => {
                     <div style={{display: 'flex'}}>
                         <CallSplitOutlined />
                         <span>{item.forks_count}</span>
+                    </div>
+                    <div>
+                        {!loading && (
+                            contributors.map(c => {
+                                return (
+                                    <a href={c.html_url}>
+                                        <img src={c.avatar_url} alt={c.login} className={classes.contributorIcon} title={c.login} />
+                                    </a>
+                                )
+                            })
+                        )}
                     </div>
                 </div>
             </div>
