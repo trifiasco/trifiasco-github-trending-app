@@ -1,35 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Trending from './trending-view';
+import useRepositories from './useRepositories';
 
 const TrendingContainer = props => {
-
-
-    const [repositories, setRepositories] = useState([]);
-    const apiUrl = 'https://api.github.com/search/repositories'
-    
-    const fetchRepos = async () => {
-      const response = await axios.get(apiUrl, {
-          params: {
-              sort: 'stars',
-              order: 'desc',
-              q: 'created:<2020-12-27'
-          }
-      });
-      const listData = response.data;
-      setRepositories(listData.items);
-    }
-
-    const [fetched, setFetched] = useState(false);
-
-    useEffect(() => {
-        if(!fetched){
-            fetchRepos();
-            setFetched(true);
-        }
-    }, [fetched] )
-
-    return (<Trending repositories={repositories}/>);
+    const {repositories, loading} = useRepositories();
+    return (
+        <div>
+            {loading && (
+                <Backdrop open={loading}>
+                    <CircularProgress color="inherit" />
+                </Backdrop>
+            )}
+            {!loading && (
+                <Trending repositories={repositories}/>
+            )}
+        </div>
+    );
 };
 
 export default TrendingContainer;
