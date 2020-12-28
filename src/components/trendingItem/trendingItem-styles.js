@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
     root: {
         flex: '0 0 100%',
-        padding: '10px',
     },
 
     container: {
@@ -23,6 +22,9 @@ const useStyles = makeStyles({
         alignItems: 'center',
         justifyContent: 'space-between'
     },
+    icon: {
+        height: '20px'
+    },
     languageIcon: {
         width: '12px',
         height: '12px',
@@ -31,13 +33,54 @@ const useStyles = makeStyles({
         display: 'inline-block',
 
         backgroundColor: '#f1e05a',
-        marginRight: '5px'
+        marginRight: '5px',
+        marginTop: '2px'
     },
 
     contributorIcon: {
         height: '20px',
         width: '20px',
         borderRadius: '50%'
+    },
+    starButton: {
+        fontSize: '12px',
+        lineHeight: '20px',
+        textTransform: 'none'
+    },
+    repoName: {
+        margin: '0'
+    },
+    description: {
+        paddingRight: '24px',
+        marginTop: '4px',
+        marginBottom: '4px',
+        color: '#586069',
+        fontSize: '14px',
+        lineHeight: '1.5'
+    },
+    language: {
+        fontSize: '12px',
+        color: '#586069',
+        lineHeight: '1.5'
+    },
+    starCount: {
+        fontSize: '12px',
+        color: '#586069',
+        lineHeight: '1.5'
+    },
+    forked: {
+        fontSize: '12px',
+        color: '#586069',
+        lineHeight: '1.5'
+    },
+    builtBy: {
+        fontSize: '12px',
+        color: '#586069',
+        lineHeight: '1.5',
+        display: 'flex'
+    },
+    builtByLabel: {
+        marginRight: '5px'
     }
     
 });

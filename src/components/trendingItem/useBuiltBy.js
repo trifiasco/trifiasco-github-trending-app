@@ -19,6 +19,7 @@ const useRepositories = (apiUrl) => {
             fetchContributors();
             setFetched(true);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [fetched]);
     
     return {contributors, loading};

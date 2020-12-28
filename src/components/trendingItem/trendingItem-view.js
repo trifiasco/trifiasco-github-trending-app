@@ -11,32 +11,36 @@ const TrendingItem = props => {
         <div className={classes.container}>
             <div className={classes.root}>
                 <div className={classes.info}>
-                    <h3>
+                    <h3 className={classes.repoName}>
                         <a href={item.html_url}>{item.owner.login}/{item.name}</a>
                     </h3>
-                    <Button variant="outlined">
-                        <StarBorderOutlined />
+                    <Button variant="outlined" classes={{label: classes.starButton}}>
+                        <StarBorderOutlined/>
                         Star
                     </Button>
                 </div>
                 
-                <p>{item.description}</p>
+                <p className={classes.description}>{item.description}</p>
                 <div className={classes.info}>
-                    <div>
+                    <div style={{display: 'flex'}}>
                         <span className={classes.languageIcon}></span>
-                        <span>{item.language}</span>
+                        <span className={classes.language}>{item.language}</span>
                     </div>
                     <div style={{display: 'flex'}}>
-                        <StarBorderOutlined />
-                        <span>
+                        <StarBorderOutlined classes={{root: classes.icon}}/>
+                        <span className={classes.starCount}>
                             {item.stargazers_count}
                         </span>
                     </div>
                     <div style={{display: 'flex'}}>
                         <CallSplitOutlined />
-                        <span>{item.forks_count}</span>
+                        <span className={classes.forked}>{item.forks_count}</span>
                     </div>
                     <div>
+                        <span className={classes.builtBy}>
+                        <span className={classes.builtByLabel}>
+                            built by
+                        </span>
                         {!loading && (
                             contributors.map(c => {
                                 return (
@@ -46,6 +50,7 @@ const TrendingItem = props => {
                                 )
                             })
                         )}
+                        </span>
                     </div>
                 </div>
             </div>
