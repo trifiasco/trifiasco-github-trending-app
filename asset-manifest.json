@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trifiasco-github-trending-app/static/css/main.e1ed13c9.chunk.css",
+    "main.js": "/trifiasco-github-trending-app/static/js/main.ead9f1d4.chunk.js",
+    "main.js.map": "/trifiasco-github-trending-app/static/js/main.ead9f1d4.chunk.js.map",
+    "runtime-main.js": "/trifiasco-github-trending-app/static/js/runtime-main.260365fd.js",
+    "runtime-main.js.map": "/trifiasco-github-trending-app/static/js/runtime-main.260365fd.js.map",
+    "static/js/2.6f63c433.chunk.js": "/trifiasco-github-trending-app/static/js/2.6f63c433.chunk.js",
+    "static/js/2.6f63c433.chunk.js.map": "/trifiasco-github-trending-app/static/js/2.6f63c433.chunk.js.map",
+    "static/js/3.277f31e2.chunk.js": "/trifiasco-github-trending-app/static/js/3.277f31e2.chunk.js",
+    "static/js/3.277f31e2.chunk.js.map": "/trifiasco-github-trending-app/static/js/3.277f31e2.chunk.js.map",
+    "index.html": "/trifiasco-github-trending-app/index.html",
+    "static/css/main.e1ed13c9.chunk.css.map": "/trifiasco-github-trending-app/static/css/main.e1ed13c9.chunk.css.map",
+    "static/js/2.6f63c433.chunk.js.LICENSE.txt": "/trifiasco-github-trending-app/static/js/2.6f63c433.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.260365fd.js",
+    "static/js/2.6f63c433.chunk.js",
+    "static/css/main.e1ed13c9.chunk.css",
+    "static/js/main.ead9f1d4.chunk.js"
+  ]
+}
