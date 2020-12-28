@@ -9,11 +9,12 @@ const useStyles = makeStyles({
         boxSizing: 'border-box',
     },
     container: {
-        width: '50vw',
         paddingTop: '40px',
         position: 'relative',
         paddingRight: '16px',
-        paddingLeft: '16px'
+        paddingLeft: '16px',
+        marginRight: '20%',
+        marginLeft: '20%'
     },
     toolbar: {
         padding: '16px',
@@ -26,6 +27,10 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
+    },
+    heading: {
+        fontSize: '22px',
+        fontWeight: '500'
     }
 });
 

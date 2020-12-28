@@ -12,7 +12,7 @@ const Trending = props => {
         <div className={classes.container}>
             <div className={classes.root}>
                 <div className={classes.toolbar}>
-                    <div>Repositories</div>
+                    <div className={classes.heading}>Repositories</div>
                 </div>
                 {repositories.map(item => {
                 return (
