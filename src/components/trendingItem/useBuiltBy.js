@@ -10,7 +10,8 @@ const useRepositories = (apiUrl) => {
       setLoading(true);
       const response = await axios.get(apiUrl);
       const listData = response.data;
-      setContributors(listData);
+      const expectedDataLength = Math.min(5, listData.length);
+      setContributors(listData.slice(0, expectedDataLength));
       setLoading(false);
     };
 
