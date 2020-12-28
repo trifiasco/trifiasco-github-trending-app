@@ -13,8 +13,9 @@ const useStyles = makeStyles({
         position: 'relative',
         paddingRight: '16px',
         paddingLeft: '16px',
-        marginRight: '20%',
-        marginLeft: '20%'
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center'
     },
     toolbar: {
         padding: '16px',
