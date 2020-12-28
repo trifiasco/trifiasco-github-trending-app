@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import Trending from './components/trending';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <header className="App-header">
+        <h2 className="App-heading-title">Trending</h2>
+        <p className="App-heading-subtitle">See what the Github community is most excited about today</p>
+      </header>
       <Trending />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }
