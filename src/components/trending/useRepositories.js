@@ -11,9 +11,9 @@ const useRepositories = () => {
       setLoading(true);
       const response = await axios.get(apiUrl, {
           params: {
-              sort: 'stars',
-              order: 'desc',
-              q: 'created:<2020-12-27'
+            sort: 'stars',
+            order: 'desc',
+            q: `created:<${new Date().toISOString()}`
           }
       });
       const listData = response.data;
